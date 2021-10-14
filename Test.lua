@@ -1,6 +1,7 @@
 warn(pcall(function()
 local buttons = game:GetService("CollectionService"):GetTagged("Button")
-
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+            
 local player = game:GetService("Players").LocalPlayer
 local playerData = game:GetService("ReplicatedStorage").PlayerData[player.UserId].Stats
 
@@ -21,6 +22,8 @@ local priorityList = {
     ["Leaf"] = 5,
 }
 
+local Window = Library.CreateLib("TITLE", "DarkTheme")
+            
 local connect
 connect = game:GetService("RunService").Stepped:Connect(function()
     --temporary
