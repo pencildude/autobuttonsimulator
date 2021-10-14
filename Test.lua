@@ -34,7 +34,7 @@ togglebutton = section:NewButton("Toggle bot (inactive)", "les go", function()
     togglebutton:UpdateButton("Toggle bot"..newtext) 
     print(newtext)
 end)
-section:NewSlider("Bot speed", "higher is better", 100, 0, function(s)
+section:NewSlider("Bot speed", "higher is better", 100, 100, function(s)
     speed = s
 end)
 
